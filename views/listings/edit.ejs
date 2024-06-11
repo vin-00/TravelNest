@@ -1,0 +1,143 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+
+            <h3>Edit your listing</h3>
+            <form method="post" action="/listings/<%= listing.id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" id="title" name="listing[title]" value="<%= listing.title %>" class="form-control" required>
+                    <div class="valid-feedback">Title looks good</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea type="text" id="description" name="listing[description]" class="form-control" required><%= listing.description %></textarea>
+                    <div class="invalid-feedback">Please write a short description</div>
+                </div>
+                
+                <div class="mb-3">
+                    Original Listing Image <br>
+                    <img src="<%= originalImageUrl %>" alt="listing Image">
+                </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload New Image</label>
+                    <input type="file" id="image" name="listing[image]" class="form-control">
+                    <div class="invalid-feedback">Please enter a valid image URL</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select name="listing[category]" id="category" class="form-control">
+
+                        <%  if(listing.category=="amazing pools"){ %>
+                            <option value="amazing pools" selected>Amazing pools</option>
+                        <%}else{
+                        %>
+                        <option value="amazing pools">Amazing pools</option>
+                        <% } %>
+                        
+                        <%  if(listing.category=="arctic"){ %>
+                            <option value="arctic" selected>Arctic</option>
+                        <%}else{
+                        %>
+                        <option value="arctic">Arctic</option>
+                        <% } %>
+                        
+                        <%  if(listing.category=="farms"){ %>
+                            <option value="farms" selected>Farms</option>
+                        
+                        <%}else{
+                        %>
+                        <option value="farms">Farms</option>
+                        
+                        <% } %>
+                        
+                        <%  if(listing.category=="castles"){ %>
+                            <option value="castles" selected>Castles</option>
+                        <%}else{
+                        %>
+                        <option value="castles">Castles</option>
+                        <% } %>
+                        
+                        <%  if(listing.category=="trending"){ %>
+                            <option value="trending" selected>Trending</option>
+                        <%}else{
+                        %>
+                        <option value="trending">Trending</option>
+                        <% } %>
+                        
+                        <%  if(listing.category=="rooms"){ %>
+                            <option value="rooms" selected>Rooms</option>
+                        <%}else{
+                        %>
+                        <option value="rooms">Rooms</option>
+                        <% } %>
+                        
+                        <%  if(listing.category=="iconic cities"){ %>
+                            <option value="iconic cities" selected>Iconic cities</option>
+                        <%}else{
+                        %>
+                        <option value="iconic cities">Iconic cities</option>
+                        <% } %>
+                        
+                        <%  if(listing.category=="mountains"){ %>
+                            <option value="mountains" selected>Mountains</option>
+                        <%}else{
+                        %>
+                        <option value="mountains">Mountains</option>
+                        <% } %>
+                        
+                        <%  if(listing.category=="camping"){ %>
+                            <option value="camping" selected>Camping</option>
+                        <%}else{
+                        %>
+                        <option value="camping">Camping</option>
+                        <% } %>
+
+                        <%  if(listing.category=="boats"){ %>
+                            <option value="boats" selected>Boats</option>
+                        <%}else{
+                        %>
+                        <option value="boats">Boats</option>
+                        <% } %>
+
+                        <%  if(listing.category=="domes"){ %>
+                            <option value="domes" selected>Domes</option>
+                        <%}else{
+                        %>
+                        <option value="domes">Domes</option>
+                        <% } %>
+                        
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="text" id="price" name="listing[price]" value="<%= listing.price %>" class="form-control" required>
+                        <div class="invalid-feedback">Price should be valid</div>
+                    </div>
+                        
+                    <div class="mb-3 col-md-8">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" id="country" name="listing[country]" value="<%= listing.country %>" class="form-control" required>
+                        <div class="invalid-feedback">Country should be valid</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" id="location" name="listing[location]" value="<%= listing.location %>" class="form-control" required>
+                    <div class="invalid-feedback">Location should be valid</div>
+                </div>
+
+                <button class="btn btn-dark edit-btn mt-3 mb-4">Edit</button>
+                
+
+            </form>
+        </div>
+    </div>
