@@ -1,5 +1,8 @@
 # TravelNest App - README
 # [Website](https://travelnest-8w76.onrender.com/listings)
+
+![image](https://github.com/vin-00/TravelNest/assets/132657698/b88a01f0-af91-4e7f-bf66-7948ffb909ec)
+
 ## Welcome to the TravelNest App! This web application provides users with a convenient platform to search for hotels and motels in various locations, visualize them on a map, and even add their own hotel listings. Below you'll find information on how to set up and use the app effectively.
 
 # Installation
