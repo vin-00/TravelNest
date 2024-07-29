@@ -39,4 +39,4 @@ Hotel Submission: Hotel owners can add their own hotel listings to the platform 
 # Contact
 If you have any questions or suggestions regarding the TravelNest App, feel free to contact me at vinaykhatri292@gmail.com
 
-## Thank you for using the TravelNest App! We hope you find it helpful in your search for the perfect accommodation.
+## Thank you for using the TravelNest App! I hope you find it helpful in your search for the perfect accommodation.
